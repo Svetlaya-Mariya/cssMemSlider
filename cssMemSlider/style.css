@@ -38,7 +38,6 @@ input[type="radio"]{
     opacity: 1;
     transform: scale(1);
     transition: opacity 1s, transform 1s;
-  
 }
 img{
     width: 100%;
@@ -47,11 +46,15 @@ img{
 .controls{
     align-self: flex-end;
     margin-top: 1.5vw;
+    
 }
  .controls label{
     cursor: pointer;
     display: inline-block;
-    margin: 0.8vw;
+    padding: 0.8vw;
+    
+}
+.controls label> div{
     width: 0.8vw;
     height: 0.8vw;
     border-radius: 5vw;
@@ -59,11 +62,11 @@ img{
     transition: background-color 0.5s, border 0.5s;
 }
 
-label:hover,
-#slide1:checked ~ .controls label:nth-child(1),
-#slide2:checked ~ .controls label:nth-child(2),
-#slide3:checked ~ .controls label:nth-child(3),
-#slide4:checked ~ .controls label:nth-child(4){
+label > div:hover,
+#slide1:checked ~ .controls label:nth-child(1) > div,
+#slide2:checked ~ .controls label:nth-child(2) > div,
+#slide3:checked ~ .controls label:nth-child(3) > div,
+#slide4:checked ~ .controls label:nth-child(4) > div{
     background-color:rgb(255, 255, 255);
     border: 2px solid rgb(255, 255, 255);
 }
