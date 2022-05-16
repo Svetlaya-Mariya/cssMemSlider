@@ -3,6 +3,10 @@ body{
     margin: 0;
     padding: 0;
 }
+p{
+    margin: 0;
+    padding: 0;
+}
 .conteiner{
     width: 58%;
     margin: 20px auto;
@@ -70,3 +74,31 @@ label > div:hover,
     background-color:rgb(255, 255, 255);
     border: 2px solid rgb(255, 255, 255);
 }
+.text{
+    display: grid;
+    grid-template-columns: 100% 100%;
+    width: 50%;
+    margin-top: -2.5vw;
+    overflow: hidden;
+    font-size: 16pt;
+    color: #fff;
+}
+.texts{
+    grid-area: 1 / 1 / 2 / 2;
+    opacity: 0;
+    transform: translateX(50%);
+    transition: opacity 1s, transform 1s;
+}
+
+#slide1:checked ~ .text > .text1,
+#slide2:checked ~ .text > .text2,
+#slide3:checked ~ .text > .text3,
+#slide4:checked ~ .text > .text4{
+    grid-area: 1 / 1 / 2 / 2;
+    opacity: 1;
+    transform: translateX(0%);
+    transition: opacity 1s, transform 1s;
+}
+
+
+
